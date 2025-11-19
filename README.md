@@ -10,6 +10,17 @@ For the final model I use **version v17.1** with:
 - **2 input frames**
 - **4 actions** (up, down, left, right)
 
+## Running Graded Assignment 02
+
+1. Create/activate the GA01 conda environment (same as in GA01).
+2. Clone this repository:
+   git clone https://github.com/tle047/dte2502-ga02-snake-pytorch.git
+   cd dte2502-ga02-snake-pytorch
+3. Run training:
+   python training.py
+4. The final model will be saved to:
+   models/v17.1/model_200000.pth
+
 ## Quick Start for Google Colab
 
 ### Step 1: Upload this zip file to Colab
@@ -82,7 +93,5 @@ A greedy evaluation (epsilon = 0.0) over 50 games on obstacle boards gives:
 - The script will use GPU if available.
 - Training logs and checkpoints are written every 500 episodes.
 - The final model used in the assignment is `model_200000.pth`.
-
-GitHub repository: https://github.com/tle047/dte2502-ga02-snake-pytorch
 
 
