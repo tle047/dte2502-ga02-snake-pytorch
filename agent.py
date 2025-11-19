@@ -334,16 +334,16 @@ class DeepQLearningAgent(Agent):
         
         self.reset_models()
 
-    def reset_models(self):
-        """ Reset all the models by creating new networks"""
-        # main network
-        self._model = self._agent_model()
-        self.optimizer = optim.RMSprop(self._model.parameters(), lr=0.0005)
+def reset_models(self):
+    """ Reset all the models by creating new networks"""
+    # main network
+    self._model = self._agent_model()
+    self.optimizer = optim.RMSprop(self._model.parameters(), lr=0.0005)
 
-        # target network
-        if self._use_target_net:
-            self._target_net = self._agent_model()
-            self.update_target_net()
+    # target network
+    if self._use_target_net:
+        self._target_net = self._agent_model()
+        self.update_target_net()
 
     def _agent_model(self):
         """Returns the model which evaluates Q values for a given state input
